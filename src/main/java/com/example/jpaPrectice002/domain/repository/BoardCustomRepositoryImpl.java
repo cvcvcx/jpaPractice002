@@ -33,7 +33,7 @@ public class BoardCustomRepositoryImpl implements BoardCustomRepository {
     @Override
     public Page<BoardDTO> findBoardPage(PageRequestDTO pageRequestDTO) {
 
-        PageRequest pageable = PageRequest.of(pageRequestDTO.getPage(), pageRequestDTO.getSize());//페이지와 게시글 수를 정하는 pageable 객체생성
+        PageRequest pageable = PageRequest.of(pageRequestDTO.getPage()-1, pageRequestDTO.getSize());//페이지와 게시글 수를 정하는 pageable 객체생성
 
         List<BoardDTO> fetch = queryFactory.select(new QBoardDTO(board.id, board.title, board.content, board.writer, board.regDate, board.modDate))
                                            .from(board)
@@ -55,6 +55,9 @@ public class BoardCustomRepositoryImpl implements BoardCustomRepository {
     private OrderSpecifier[] createBoardOrderBy(PageRequestDTO pageRequestDTO) {
         List<OrderSpecifier> orderSpecifiers = new ArrayList<>();
         BoardSearchSort sort = pageRequestDTO.getSort();
+        if(sort==null){
+            orderSpecifiers.add(new OrderSpecifier<>(Order.DESC,board.regDate));
+        }else
         //이넘 리스트를 넘기면 여러 정렬조건이 들어갈 수 있는걸까? -- 생각해볼 문제
         if (sort.equals(BoardSearchSort.TITLE_ASC)) {
             orderSpecifiers.add(new OrderSpecifier<>(Order.ASC, board.title));
