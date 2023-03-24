@@ -1,10 +1,10 @@
-package com.example.jpaPrectice002.service;
+package com.example.jpaPractice002.service;
 
 
-import com.example.jpaPrectice002.domain.dto.BoardDTO;
-import com.example.jpaPrectice002.domain.dto.PageListResponseDTO;
-import com.example.jpaPrectice002.domain.dto.PageRequestDTO;
-import com.example.jpaPrectice002.domain.repository.BoardRepository;
+import com.example.jpaPractice002.domain.dto.BoardDTO;
+import com.example.jpaPractice002.domain.dto.PageListResponseDTO;
+import com.example.jpaPractice002.domain.dto.PageRequestDTO;
+import com.example.jpaPractice002.domain.repository.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;

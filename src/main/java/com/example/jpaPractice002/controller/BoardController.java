@@ -1,12 +1,11 @@
-package com.example.jpaPrectice002.controller;
+package com.example.jpaPractice002.controller;
 
-import com.example.jpaPrectice002.domain.dto.BoardDTO;
-import com.example.jpaPrectice002.domain.dto.BoardSearchSort;
-import com.example.jpaPrectice002.domain.dto.PageListResponseDTO;
-import com.example.jpaPrectice002.domain.dto.PageRequestDTO;
-import com.example.jpaPrectice002.service.BoardService;
+import com.example.jpaPractice002.domain.dto.BoardDTO;
+import com.example.jpaPractice002.domain.dto.BoardSearchSort;
+import com.example.jpaPractice002.domain.dto.PageListResponseDTO;
+import com.example.jpaPractice002.domain.dto.PageRequestDTO;
+import com.example.jpaPractice002.service.BoardService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

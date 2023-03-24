@@ -1,4 +1,4 @@
-package com.example.jpaPrectice002.domain.dto;
+package com.example.jpaPractice002.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,11 +1,9 @@
-package com.example.jpaPrectice002.domain.dto;
+package com.example.jpaPractice002.domain.dto;
 
 import com.querydsl.core.annotations.QueryProjection;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.querydsl.binding.QuerydslPredicate;
 
 import java.time.LocalDateTime;
 

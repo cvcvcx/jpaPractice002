@@ -1,12 +1,12 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.0.4'
+	id 'org.springframework.boot' version '2.7.4'
 	id 'io.spring.dependency-management' version '1.1.0'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '11'
 
 configurations {
 	compileOnly {
@@ -30,8 +30,8 @@ dependencies {
 	// spring boot 3.0.0버전부터는 querydsl을 설정할 때, javaee를 사용하는 것이 아니라 jakartaEE를 사용하게 된다.
 	//그래서 이렇게 설정 맨 뒤에 jakarta를 넣어주는 것이 중요하다.
 	//2023년 12월까지 2.7.~ 버전이 지원되지만, 이후로는 보안지원이 종료되고 업데이트도 종료되기때문에 할 줄 알아야함
-	implementation("com.querydsl:querydsl-jpa:5.0.0:jakarta")
-	annotationProcessor("com.querydsl:querydsl-apt:5.0.0:jakarta")
+	implementation("com.querydsl:querydsl-jpa:5.0.0")
+	annotationProcessor("com.querydsl:querydsl-apt:5.0.0:jpa")
 	annotationProcessor("jakarta.persistence:jakarta.persistence-api")
 	annotationProcessor("jakarta.annotation:jakarta.annotation-api")
 }

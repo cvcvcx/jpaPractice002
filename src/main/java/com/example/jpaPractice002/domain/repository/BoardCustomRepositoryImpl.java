@@ -1,11 +1,10 @@
-package com.example.jpaPrectice002.domain.repository;
+package com.example.jpaPractice002.domain.repository;
 
 
-import com.example.jpaPrectice002.domain.dto.BoardDTO;
-import com.example.jpaPrectice002.domain.dto.BoardSearchSort;
-import com.example.jpaPrectice002.domain.dto.PageRequestDTO;
-import com.example.jpaPrectice002.domain.dto.QBoardDTO;
-import com.example.jpaPrectice002.domain.entity.QBoard;
+import com.example.jpaPractice002.domain.dto.BoardDTO;
+import com.example.jpaPractice002.domain.dto.BoardSearchSort;
+import com.example.jpaPractice002.domain.dto.PageRequestDTO;
+import com.example.jpaPractice002.domain.dto.QBoardDTO;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Order;
 import com.querydsl.core.types.OrderSpecifier;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import static com.example.jpaPrectice002.domain.entity.QBoard.board;
+import static com.example.jpaPractice002.domain.entity.QBoard.board;
 
 @Repository
 @RequiredArgsConstructor

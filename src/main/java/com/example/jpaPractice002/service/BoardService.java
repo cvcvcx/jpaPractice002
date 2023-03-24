@@ -1,9 +1,9 @@
-package com.example.jpaPrectice002.service;
+package com.example.jpaPractice002.service;
 
-import com.example.jpaPrectice002.domain.dto.BoardDTO;
-import com.example.jpaPrectice002.domain.dto.PageListResponseDTO;
-import com.example.jpaPrectice002.domain.dto.PageRequestDTO;
-import com.example.jpaPrectice002.domain.entity.Board;
+import com.example.jpaPractice002.domain.dto.BoardDTO;
+import com.example.jpaPractice002.domain.dto.PageListResponseDTO;
+import com.example.jpaPractice002.domain.dto.PageRequestDTO;
+import com.example.jpaPractice002.domain.entity.Board;
 
 public interface BoardService {
 

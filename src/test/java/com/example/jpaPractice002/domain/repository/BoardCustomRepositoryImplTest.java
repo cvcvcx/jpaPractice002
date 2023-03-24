@@ -1,17 +1,14 @@
-package com.example.jpaPrectice002.domain.repository;
+package com.example.jpaPractice002.domain.repository;
 
-import com.example.jpaPrectice002.domain.dto.BoardDTO;
-import com.example.jpaPrectice002.domain.dto.BoardSearchSort;
-import com.example.jpaPrectice002.domain.dto.PageRequestDTO;
-import com.example.jpaPrectice002.domain.entity.Board;
+import com.example.jpaPractice002.domain.dto.BoardDTO;
+import com.example.jpaPractice002.domain.dto.PageRequestDTO;
+import com.example.jpaPractice002.domain.entity.Board;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 
 import java.util.stream.IntStream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class BoardCustomRepositoryImplTest {
@@ -40,7 +37,7 @@ class BoardCustomRepositoryImplTest {
                                           .type("wt")
                                           .keyword("2")
                                           .build();
-        
+
         Page<BoardDTO> boardPage = boardRepository.findBoardPage(pageRequestDTO);
         System.out.println("boardPage = " + boardPage);
         boardPage.forEach(item-> System.out.println("item = " + item));
