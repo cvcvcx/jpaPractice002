@@ -27,12 +27,12 @@ public class PageListResponseDTO<DTO> {
     }
 
     public void makePageList(Pageable pageable){
-        this.page = pageable.getPageNumber();
+        this.page = pageable.getPageNumber()+1;
         this.size = pageable.getPageSize();
         //임시 끝페이지
-        int tempEnd = (int)(Math.ceil(page)/10)*10;
-        int start = tempEnd-9;
-        int end = totalPage>tempEnd ? tempEnd : totalPage;
+        int tempEnd = (int)(Math.ceil((page)/10.0))*10;
+        start = tempEnd-9;
+        end = totalPage>tempEnd ? tempEnd : totalPage;
         prev = start>1;
         next = totalPage>end;
         pageList = IntStream.rangeClosed(start,end).boxed().collect(Collectors.toList());
